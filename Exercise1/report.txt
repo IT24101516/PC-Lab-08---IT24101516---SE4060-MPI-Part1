@@ -3,3 +3,5 @@ Student ID: IT24101516
 Existing repository: https://github.com/IT24101516/PC-Lab-08---IT24101516---SE4060-MPI-Part1
 The existing repository is reused. Exercise solutions are organized into Exercise0 through Exercise7.
 Solutions and measured results were validated on EC2 and committed locally. See Git history for the commit identifiers. Push status is recorded below. Never commit the EC2 private key.
+
+Push attempted on 2026-10-22. GitHub returned HTTP 403: the signed-in account DahamKu101 lacks permission to push to the IT24101516 repository. Authenticate as the repository owner or grant the current account write access, then run git push origin main. All work is committed locally.
