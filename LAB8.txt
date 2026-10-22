@@ -12,4 +12,5 @@ For multi-node execution configure identical MPI installations, source/executabl
 Instruction ambiguities and the source wildcard interpretation are documented in Exercise4/report.txt and Exercise6/report.txt.
 Original repository starter files are retained. The private key remains outside the repository.
 
-Validation completed on 2026-10-22 using ec2-user on Amazon Linux 2023 / Open MPI 4.1.2. All programs compiled and ran; 60 timed runs passed result checks. Graphs and raw logs are saved in the exercise folders. Multi-node execution remains pending a second instance; current measurements use one node with one available CPU.
+Validation completed on 2026-10-22 using ec2-user on Amazon Linux 2023 / Open MPI 4.1.2. All programs compiled and ran; 60 timed runs passed result checks. Graphs and raw logs are saved in the exercise folders. Following the user-provided Lab 7 examples, the accepted Lab 8 execution setup is Open MPI on one Amazon Linux EC2 instance using --oversubscribe. Current measurements use one node with one available CPU; no physical multi-node scaling is claimed.
+
