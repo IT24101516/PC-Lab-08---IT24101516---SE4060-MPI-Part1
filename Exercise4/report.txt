@@ -1,0 +1,22 @@
+Lab 8 - Exercise 4
+The PDF refers to Exercises 1 and 2, but Exercise 1 is repository setup and has no computational workload. Therefore benchmark both computational exercises: Exercise 2 (sum) and Exercise 3 (Monte Carlo pi). Also compare Exercises 6 and 7.
+Use MPI_Wtime, synchronized start, and the maximum elapsed duration across ranks. Times cover computation plus result collection; MPI startup is excluded. Take five measurements per process count and plot medians. Speedup is median T(1) / median T(p). Very small sum workloads may be dominated by communication and measurement overhead.
+run_lab.sh writes actual timings.csv and hardware/environment information. plot_results.py checks sums and identical pi counts before creating time.png, speedup.png and summary.csv.
+Single-host process scaling is not multi-node scaling. Record the host configuration used. Do not label oversubscribed process counts as additional physical processors.
+Completed 60 timed EC2 runs: four programs, three process counts (1, 2, 4), five repetitions each. Graphs: time.png and speedup.png. Hardware and launch flags: environment.txt. One available CPU on one node means 2 and 4 ranks were oversubscribed; these results cannot establish multi-node scaling.
+
+Measured medians and speedups (one available CPU):
+pi: processes=1, seconds=0.080934162, speedup=1.000
+pi: processes=2, seconds=0.080954540, speedup=1.000
+pi: processes=4, seconds=0.081181925, speedup=0.997
+pi_any_source: processes=1, seconds=0.080768022, speedup=1.000
+pi_any_source: processes=2, seconds=0.080913059, speedup=0.998
+pi_any_source: processes=4, seconds=0.081120463, speedup=0.996
+pi_bsend: processes=1, seconds=0.083090039, speedup=1.000
+pi_bsend: processes=2, seconds=0.081911223, speedup=1.014
+pi_bsend: processes=4, seconds=0.083560035, speedup=0.994
+sum: processes=1, seconds=0.004712364, speedup=1.000
+sum: processes=2, seconds=0.004714552, speedup=1.000
+sum: processes=4, seconds=0.005203487, speedup=0.906
+
+With one available CPU there is no additional CPU capacity at higher rank counts. Communication, scheduling and MPI waiting overhead can reduce speedup. Differences between receive orders and buffered sends are timing observations from this host, not general performance guarantees.

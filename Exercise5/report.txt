@@ -1,0 +1,4 @@
+Lab 8 - Exercise 5
+1. mismatch.cpp: rank 1 synchronously sends to rank 3, but rank 3 receives only from rank 2. Source/destination matching fails. Neither operation can complete; the program hangs. Run under timeout, never without it during automated testing. An invalid rank would instead be an MPI error; this example uses valid but mismatched ranks.
+2. message2_bsend.cpp retains the original x and y arrays and sends x from rank 1 to rank 3. MPI_Pack_size plus MPI_BSEND_OVERHEAD determines the attached buffer size. MPI_Buffer_detach waits for buffered sends to finish before the buffer is freed. Bsend copies data into the attached buffer; it does not fix unmatched receives.
+Verified on EC2 with 4 processes. The mismatch timed out with status 124, as expected. Buffered send delivered 0, 10, 20, 30, 40, 50, 60, 70, 80, 90. See the output text files in this folder.

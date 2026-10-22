@@ -1,0 +1,2 @@
+Rank 1 sends to rank 3; rank 3 expects rank 2.
+timeout exit status: 124 (124 expected)

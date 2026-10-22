@@ -1,0 +1,4 @@
+Lab 8 - Exercise 7
+Exercise 6 is rewritten using MPI_Bsend. The local count variable remains the send variable. A buffer sized with MPI_Pack_size plus MPI_BSEND_OVERHEAD is attached before sending, then detached before being freed. The receiver still uses MPI_ANY_SOURCE with tag 17.
+The inside count and pi estimate must match Exercises 3 and 6 exactly. Buffered send permits local completion after copying into its buffer, but does not guarantee a speedup.
+Verified on EC2 with 1, 2 and 4 processes, five repetitions each. All runs of Exercises 3, 6 and 7 yielded exactly 7,854,048 inside points and pi = 3.1416192000. Median time and speedup comparisons are in Exercise4/summary.csv.

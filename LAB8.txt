@@ -1,0 +1,15 @@
+Lab 8 - MPI
+The supplied PDF is titled Lab Sheet 6; this submission uses Lab 8 as requested.
+Each Exercise folder contains its source and report.txt. The PDF does not request screenshots or a Word document.
+
+Build/run on an MPI-equipped Linux host:
+  bash run_lab.sh
+  python3 Exercise4/plot_results.py
+Dependencies: a C++ compiler, MPI development tools and launcher, Python 3 with matplotlib. Ubuntu package names: build-essential openmpi-bin libopenmpi-dev python3-matplotlib.
+Use at least four ranks for messaging examples. The deliberately mismatched synchronous send is guarded by a ten-second timeout.
+For multi-node execution configure identical MPI installations, source/executable paths and SSH access on all nodes, then set MPI_FLAGS to --hostfile followed by the hostfile path. An EC2 private key alone does not identify the instance address.
+
+Instruction ambiguities and the source wildcard interpretation are documented in Exercise4/report.txt and Exercise6/report.txt.
+Original repository starter files are retained. The private key remains outside the repository.
+
+Validation completed on 2026-10-22 using ec2-user on Amazon Linux 2023 / Open MPI 4.1.2. All programs compiled and ran; 60 timed runs passed result checks. Graphs and raw logs are saved in the exercise folders. Multi-node execution remains pending a second instance; current measurements use one node with one available CPU.

@@ -1,0 +1,5 @@
+Lab 8 - Exercise 2
+Sum integers 1 through 10,000,000 using balanced MPI ranges and MPI_Reduce.
+Expected exact sum: 50,000,005,000,000. A 64-bit integer is required.
+The code supports multiple hosts when launched with an MPI hostfile. Several ranks on one EC2 instance are processes on one node, not a multi-node test.
+Verified on Amazon Linux EC2 with Open MPI 4.1.2, using 1, 2 and 4 processes: every sum was 50,000,005,000,000. Raw measurements are in Exercise4/timings.csv.

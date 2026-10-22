@@ -1,0 +1,4 @@
+Lab 8 - Exercise 6
+The PDF says to change the receiving Tag to MPI_ANY_SOURCE. MPI_ANY_SOURCE is a source wildcard and belongs in the source argument, not the tag argument. The tag wildcard would be MPI_ANY_TAG.
+The Exercise 3 program is changed to receive from MPI_ANY_SOURCE while retaining tag 17. Exactly size-1 messages are received, and MPI_Status captures the actual sender. Integer addition is order independent, so the inside count and pi estimate must match Exercise 3 exactly with the same samples. Arrival order and timings may differ.
+Verified on EC2 with 1, 2 and 4 processes, five repetitions each. All runs of Exercises 3, 6 and 7 yielded exactly 7,854,048 inside points and pi = 3.1416192000. Median time and speedup comparisons are in Exercise4/summary.csv.

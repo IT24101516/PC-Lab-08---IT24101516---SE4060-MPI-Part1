@@ -1,0 +1,5 @@
+Lab 8 - Exercise 3
+Monte Carlo estimate: sample 10,000,000 points in the unit square; pi = 4 * points_in_quarter_circle / total_points.
+Each rank computes a balanced range of sample indices. Rank zero receives counts from explicit source ranks with tag 17.
+A deterministic SplitMix64 generator gives identical sample points across process counts, making results reproducible. This is an independent implementation; the historical Dartmouth sample URL in the PDF returns 404.
+Verified on EC2 with 1, 2 and 4 processes, five repetitions each: inside count 7,854,048; pi = 3.1416192000. Raw timings are in Exercise4/timings.csv.

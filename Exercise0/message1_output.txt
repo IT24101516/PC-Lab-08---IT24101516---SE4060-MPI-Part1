@@ -1,0 +1,4 @@
+SEnding message to computer 3 from computer 1
+in computer 3 the value of y is 30
+Just a normal process From rank 0 machine ip-10-0-1-9.ec2.internal
+Just a normal process From rank 2 machine ip-10-0-1-9.ec2.internal
