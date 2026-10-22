@@ -1,6 +1,0 @@
-Lab 8 - Exercise 0
-Lecture starter programs: hello.cpp, message1.cpp, message2.cpp.
-Compile using mpicxx. Run hello with 4 ranks; the two messaging examples need at least 4 ranks because ranks 1 and 3 communicate.
-Processor names use MPI_MAX_PROCESSOR_NAME to avoid overflowing the original 30-character array. Messaging programs validate their process count.
-Verified on EC2 with 4 ranks: hello printed one rank-zero greeting and three normal-process messages; message1 delivered 30; message2 delivered 0 through 90 in steps of 10. See the three output text files.
-

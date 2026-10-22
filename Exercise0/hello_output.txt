@@ -1,4 +1,0 @@
-Just a normal process From rank 2 machine ip-10-0-1-9.ec2.internal
-Hello World! From rank 0 machine ip-10-0-1-9.ec2.internal
-Just a normal process From rank 3 machine ip-10-0-1-9.ec2.internal
-Just a normal process From rank 1 machine ip-10-0-1-9.ec2.internal
