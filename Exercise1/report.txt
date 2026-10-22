@@ -2,4 +2,4 @@ Lab 8 - Exercise 1: repository
 Student ID: IT24101516
 Existing repository: https://github.com/IT24101516/PC-Lab-08---IT24101516---SE4060-MPI-Part1
 The existing repository is reused. Exercise solutions are organized into Exercise0 through Exercise7.
-Commit/push status will be recorded after validation. Never commit the EC2 private key.
+Solutions and measured results were validated on EC2 and committed locally. See Git history for the commit identifiers. Push status is recorded below. Never commit the EC2 private key.
